@@ -1,0 +1,9 @@
+{
+    "login": ".landing-header__login",
+    "loginPopUp": ".auth-page-layout",
+    "inputPhone": ":nth-child(1) > .ui-field__content > .ui-input > .ui-input__content > .ui-input__input",
+    "inputPass": ":nth-child(2) > .ui-field__content > .ui-input > .ui-input__content > .ui-input__input",
+    "submit": "[type='submit']",
+    "navbarDesktop": ".navbar-desktop",
+    "navBarAvatar": ".ui-popover > .ui-avatar"
+}

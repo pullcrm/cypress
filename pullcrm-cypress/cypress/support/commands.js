@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+import './commands/auth'
+
+Cypress.Commands.add('visitAuth', (url) => {
+    cy.visit(url, {
+        onBeforeLoad: (win) => { win.fetch = null, win.sessionStorage.clear() },
+        auth: {
+            username: Cypress.env('BASIC_AUTH_USER'),
+            password: Cypress.env('BASIC_AUTH_PASSWORD')
+        }
+    })
+});
