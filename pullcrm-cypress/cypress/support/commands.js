@@ -25,7 +25,11 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-import './commands/auth'
+import './commands/authorization'
+import './commands/registration'
+import './commands/recover'
+
+
 
 Cypress.Commands.add('visitAuth', (url) => {
     cy.visit(url, {
