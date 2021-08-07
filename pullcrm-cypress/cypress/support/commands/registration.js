@@ -1,8 +1,9 @@
 let element = require('../../storage/dataTest.json');
 
-Cypress.Commands.add('deleteUser', (tel, pass) => {
-    //there will be a function here that deletes the user
-    cy.log('there will be a function here that deletes the user')
+Cypress.Commands.add('deleteUser', () => {
+    cy.request('GET', `${Cypress.env('CY_BASE_URL')}/api/tests/rdu`).then((response) => {
+        console.log(response.body)
+    });
 });
 Cypress.Commands.add('registrationUser', (tel, pass, name) => {
     cy.get(element.login)
