@@ -14,6 +14,8 @@ Cypress.Commands.add('recoverPassword', (tel, pass, newPass) => {
         .click();
     cy.get(element.inputPass)
         .type(newPass)
+    cy.get(element.inputRepeatPassword)
+        .type(newPass);
     cy.get(element.inputSmsCode)
         .type(pass)
     cy.get(element.submitBtn)

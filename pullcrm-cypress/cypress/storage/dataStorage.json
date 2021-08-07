@@ -1,6 +1,23 @@
 {
     "regNewUser": { "tel": "0111111111", "pass": 1111, "name": "Said Jara" },
     "oldUser": { "tel": "0999999991", "pass": 9991 },
-    "recoverUser": { "tel": "0999999993", "pass": "9993", "newPass": "1234" }
+    "recoverUser": { "tel": "0999999993", "pass": "9993", "newPass": "1234" },
+    "specialists": {
+        "1": {
+            "name": "Петя",
+            "tel": "0300000001",
+            "pass": "0001"
+        },
+        "2": {
+            "name": "Галина Павловна",
+            "tel": "0300000002",
+            "pass": "0002"
+        },
+        "3": {
+            "name": "Muzaebeg",
+            "tel": "0300000003",
+            "pass": "0003"
+        }
+    }
 
 }

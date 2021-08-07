@@ -13,13 +13,18 @@
     "registratioBtnMain": ".landing-header__registration",
     "recoverPassBtn": ".auth-page-login__reset",
     "title": ".ui-title",
-    "inputSmsCode": "[placeholder^='Введите код']",
+    "inputSmsCode": "[placeholder^='Введите СМС-код']",
+    "inputSmsCodeZ": "[placeholder^='***']",
     "toast": "[data-test=ui-toast]",
     "dashboardPage": ".dashboard-page",
     "inputCompanyName": "[placeholder='Ваша компания']",
     "inputCityName": "[placeholder='Выбрать город']",
     "inputCategoryName": "[placeholder='Выбрать категорию']",
     "selectBody": "[data-test=ui-select-body]",
-    "carouselItem": "[data-test=ui-carousel-inner]>>.ui-panel"
+    "carouselItem": "[data-test=ui-carousel-inner]>>.ui-panel",
+    "specialistsLink": "[href='/specialists/']",
+    "specialistsPage": ".specialists-page",
+    "button": ".ui-button",
+    "inputRepeatPassword": "[name='repeatPassword']"
 
 }

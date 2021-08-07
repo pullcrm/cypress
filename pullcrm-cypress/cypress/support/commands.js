@@ -29,6 +29,8 @@ import './commands/authorization'
 import './commands/registration'
 import './commands/recover'
 import './commands/new_company'
+import './commands/new_specialists'
+
 
 
 

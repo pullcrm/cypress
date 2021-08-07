@@ -30,7 +30,7 @@ Cypress.Commands.add('registrationUser', (tel, pass, name) => {
         .type(name);
     cy.get(element.submitBtn)
         .click();
-    cy.get(element.popup)
+    cy.get(element.inputSmsCodeZ)
         .type(pass)
     cy.contains('Создание компании');
 });
