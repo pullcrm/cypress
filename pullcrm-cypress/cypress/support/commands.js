@@ -28,6 +28,8 @@
 import './commands/authorization'
 import './commands/registration'
 import './commands/recover'
+import './commands/new_company'
+
 
 
 
