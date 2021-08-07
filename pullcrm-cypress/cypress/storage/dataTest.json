@@ -15,5 +15,11 @@
     "title": ".ui-title",
     "inputSmsCode": "[placeholder^='Введите код']",
     "toast": "[data-test=ui-toast]",
-    "dashboardPage": ".dashboard-page"
+    "dashboardPage": ".dashboard-page",
+    "inputCompanyName": "[placeholder='Ваша компания']",
+    "inputCityName": "[placeholder='Выбрать город']",
+    "inputCategoryName": "[placeholder='Выбрать категорию']",
+    "selectBody": "[data-test=ui-select-body]",
+    "carouselItem": "[data-test=ui-carousel-inner]>>.ui-panel"
+
 }
