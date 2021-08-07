@@ -14,7 +14,12 @@
     "recoverPassBtn": ".auth-page-login__reset",
     "title": ".ui-title",
     "inputSmsCode": "[placeholder^='Введите СМС-код']",
+    "inputServiceName": "[placeholder='Введите название']",
     "inputSmsCodeZ": "[placeholder^='***']",
+    "inputPrice": "[placeholder='Укажите цену']",
+    "inputTime": "[placeholder='Выбрать время']",
+    "inputDescription": "[placeholder='Добавьте описание']",
+    "inputCategogyName": "[placeholder='Введите название']",
     "toast": "[data-test=ui-toast]",
     "dashboardPage": ".dashboard-page",
     "inputCompanyName": "[placeholder='Ваша компания']",
@@ -23,8 +28,10 @@
     "selectBody": "[data-test=ui-select-body]",
     "carouselItem": "[data-test=ui-carousel-inner]>>.ui-panel",
     "specialistsLink": "[href='/specialists/']",
+    "proceduresLink": "[href='/procedures/']",
     "specialistsPage": ".specialists-page",
     "button": ".ui-button",
-    "inputRepeatPassword": "[name='repeatPassword']"
-
+    "inputRepeatPassword": "[name='repeatPassword']",
+    "proceduresPage": ".procedures-page",
+    "proceduresPageProcedureCard": ".procedures-page-procedure-card"
 }

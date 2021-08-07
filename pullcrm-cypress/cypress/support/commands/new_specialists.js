@@ -18,9 +18,4 @@ Cypress.Commands.add('regNewSpecialists', (companyName, specialistsName, special
         .click();
     cy.get(element.inputSmsCodeZ)
         .type(pass).wait(3000)
-
-
-
-
-
-})
+});
