@@ -8,6 +8,8 @@ Cypress.Commands.add('addService', (inputServiceName, price, time, description) 
     cy.get('button')
         .contains('Добавить услугу')
         .click();
+    cy.get(element.popup).find(element.title)
+        .contains('Добавить услугу');
     cy.get(element.inputServiceName)
         .type(inputServiceName)
     cy.get(element.inputPrice)
@@ -53,8 +55,6 @@ Cypress.Commands.add('addServiceInCategiry', (inputServiceName, price, time, des
             assert.isOk(inputCategoryName[0]._value === category, `Категория ${category} уже выбрана в popUp`)
         });
     };
-
-
     cy.get(element.inputServiceName)
         .type(inputServiceName)
     cy.get(element.inputPrice)
@@ -76,4 +76,32 @@ Cypress.Commands.add('addServiceInCategiry', (inputServiceName, price, time, des
             cy.contains(time);
             cy.contains(description);
         });
+});
+
+Cypress.Commands.add('editService', (inputServiceName, price, time, description, category) => {
+    cy.get(element.proceduresPageProcedureCard)
+        .click();
+    cy.get(element.popup).find(element.title)
+        .contains('Редактироват');
+
+    cy.get(element.inputServiceName).clear()
+        .type(inputServiceName)
+    cy.get(element.inputPrice).clear()
+        .type(price)
+    cy.get(element.inputTime).clear()
+        .click();
+    cy.get(element.selectBody)
+        .contains(time)
+        .click();
+    cy.get(element.inputDescription).clear()
+        .type(description)
+    cy.get(element.submitBtn)
+        .click().wait(1000);
+    cy.get(element.proceduresPageProcedureCard).within(() => {
+        cy.contains(inputServiceName);
+        cy.contains(price);
+        cy.contains(time);
+        cy.contains(description);
+    });
+
 });

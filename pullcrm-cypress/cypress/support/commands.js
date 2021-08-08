@@ -28,10 +28,10 @@
 import './commands/authorization'
 import './commands/registration'
 import './commands/recover'
-import './commands/new_company'
-import './commands/new_specialists'
-import './commands/new_service'
-import './commands/new_category'
+import './commands/company'
+import './commands/specialists'
+import './commands/service'
+import './commands/category'
 
 
 
