@@ -17,5 +17,6 @@ Cypress.Commands.add('regNewSpecialists', (companyName, specialistsName, special
     cy.get(element.submitBtn)
         .click();
     cy.get(element.inputSmsCodeZ)
-        .type(pass).wait(3000)
+        .type(pass)
+        //тест не закончен
 });
