@@ -138,7 +138,7 @@ declare namespace CypressCommandLine {
     /**
      * Specify configuration
      */
-    config: Partial<Cypress.ResolvedConfigOptions>
+    config: Cypress.ConfigOptions
     /**
      * Path to the config file to be used.
      *
@@ -156,6 +156,11 @@ declare namespace CypressCommandLine {
      * Path to a specific project
      */
     project: string
+    /**
+     * Specify the type of tests to execute.
+     * @default "e2e"
+     */
+    testingType: Cypress.TestingType
   }
 
   // small utility types to better express meaning of other types
