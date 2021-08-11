@@ -20,6 +20,7 @@
     "inputTime": "[placeholder='Выбрать время']",
     "inputDescription": "[placeholder='Добавьте описание']",
     "inputCategogyName": "[placeholder='Введите название']",
+    "inputSpecialistName": "[placeholder='Выбрать специалистов']",
     "toast": "[data-test=ui-toast]",
     "dashboardPage": ".dashboard-page",
     "inputCompanyName": "[placeholder='Ваша компания']",
@@ -33,5 +34,14 @@
     "button": ".ui-button",
     "inputRepeatPassword": "[name='repeatPassword']",
     "proceduresPage": ".procedures-page",
-    "proceduresPageProcedureCard": ".procedures-page-procedure-card"
+    "proceduresPageProcedureCard": ".procedures-page-procedure-card",
+    "widgetLink": "[href^='https://dev.pullcrm.com/widgets/full']",
+    "header": ".header",
+    "multiSelect": ".ui-multi-select__badge",
+    "fullWidgetSpecialistPanel": ".full-widget-specialist-panel",
+    "baseWidgetProcedurePanel": ".base-widget-procedure-panel",
+    "fullWidgetPickDatePageButton": ".full-widget-pick-date-page__button",
+    "fullWidgetProceduresPageButton": ".full-widget-procedures-page__button",
+    "fullWidgetDatePickerItemDate": ".full-widget-date-picker-item__date",
+    "fullWidgetPickDatePageTimePickerGroup": ".full-widget-pick-date-page-time-picker-group"
 }

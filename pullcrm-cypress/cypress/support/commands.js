@@ -32,9 +32,7 @@ import './commands/company'
 import './commands/specialists'
 import './commands/service'
 import './commands/category'
-
-
-
+import './commands/widget'
 
 
 

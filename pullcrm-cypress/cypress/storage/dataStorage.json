@@ -1,4 +1,5 @@
 {
+    "clients": { "name": "Жора", "tel": "0111111113" },
     "regNewUser": { "tel": "0111111111", "pass": 1111, "name": "Auto testing user" },
     "oldUser": { "tel": "0111111112", "pass": 1112 },
     "recoverUser": { "tel": "0999999993", "pass": "9993", "newPass": "1234" },

@@ -1,5 +1,5 @@
 let element = require('../../storage/dataTest.json');
-Cypress.Commands.add('addService', (inputServiceName, price, time, description) => {
+Cypress.Commands.add('addService', (inputServiceName, price, time, description, setSpecialist) => {
     cy.get(element.navbarDesktop)
         .find(element.proceduresLink)
         .click();
@@ -20,7 +20,16 @@ Cypress.Commands.add('addService', (inputServiceName, price, time, description) 
         .contains(time)
         .click();
     cy.get(element.inputDescription)
-        .type(description)
+        .type(description);
+    if (setSpecialist) {
+        cy.get(element.inputSpecialistName)
+            .click();
+        cy.get(element.selectBody)
+            .contains(setSpecialist)
+            .click();
+        cy.get(element.multiSelect)
+            .should('be.visible')
+    }
     cy.get(element.submitBtn)
         .click().wait(1000);
     cy.get(element.proceduresPageProcedureCard).within(() => {
