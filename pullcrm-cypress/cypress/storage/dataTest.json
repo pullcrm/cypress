@@ -20,6 +20,9 @@
     "inputTime": "[placeholder='Выбрать время']",
     "inputDescription": "[placeholder='Добавьте описание']",
     "inputCategogyName": "[placeholder='Введите название']",
+    "inputClientName": "[placeholder='Имя']",
+    "inputClientTel": "[placeholder='Телефон']",
+    "inputClientСomments": "[placeholder^='Комментарий']",
     "inputSpecialistName": "[placeholder='Выбрать специалистов']",
     "toast": "[data-test=ui-toast]",
     "dashboardPage": ".dashboard-page",
@@ -41,7 +44,13 @@
     "fullWidgetSpecialistPanel": ".full-widget-specialist-panel",
     "baseWidgetProcedurePanel": ".base-widget-procedure-panel",
     "fullWidgetPickDatePageButton": ".full-widget-pick-date-page__button",
+    "fullWidgetConfirmationPageButton": ".full-widget-confirmation-page__button",
     "fullWidgetProceduresPageButton": ".full-widget-procedures-page__button",
     "fullWidgetDatePickerItemDate": ".full-widget-date-picker-item__date",
-    "fullWidgetPickDatePageTimePickerGroup": ".full-widget-pick-date-page-time-picker-group"
+    "fullWidgetPickDatePageTimePickerGroup": ".full-widget-pick-date-page-time-picker-group",
+    "fullWidgetLayout": ".full-widget-layout",
+    "schedulePageHeaderTomorrow": ".schedule-page-header__tomorrow",
+    "timeBtnWidget": ".full-widget-pick-date-page-time-picker-group__badges>",
+    "appointment": ".appointment",
+    "buttonThemeInfoOutlined": ".ui-button_theme_info-outlined"
 }

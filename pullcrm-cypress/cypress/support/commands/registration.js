@@ -5,7 +5,7 @@ Cypress.Commands.add('deleteUser', () => {
         console.log(response.body)
     });
 });
-Cypress.Commands.add('registrationUser', (tel, pass, name) => {
+Cypress.Commands.add('registrationUser', (user) => {
     cy.get(element.login)
         .click();
     cy.get(element.loginPopUp)
@@ -23,14 +23,14 @@ Cypress.Commands.add('registrationUser', (tel, pass, name) => {
         .should('be.visible');
     cy.contains('Регистрация');
     cy.get(element.inputPhone)
-        .type(tel);
+        .type(user.tel);
     cy.get(element.inputPass)
-        .type(pass);
+        .type(user.pass);
     cy.get(element.inputName)
-        .type(name);
+        .type(user.name);
     cy.get(element.submitBtn)
         .click();
     cy.get(element.inputSmsCodeZ)
-        .type(pass)
+        .type(user.pass)
     cy.contains('Создание компании');
 });
