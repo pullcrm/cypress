@@ -51,3 +51,17 @@ Cypress.Commands.add('makeAppointmentInWidget', (specialis, cervice, day, time, 
         .click();
     cy.get(element.appointment).contains(client.name)
 });
+
+Cypress.Commands.add('deleteAllAppointmentsFoTtheCompany', (tel) => {
+    cy.task('queryDb', `SELECT * FROM pullcrm_dev.users where phone = ${tel};`).then((user) => {
+        let userId = user[0].id;
+        console.log(userId)
+        cy.task('queryDb', `SELECT * FROM pullcrm_dev.companies where userId = ${userId};`).then((companies) => {
+            let companiesId = companies[0].id;
+            console.log(companiesId)
+            cy.task(
+                'queryDb',
+                `DELETE FROM pullcrm_dev.appointments where companyId = ${companiesId};`)
+        });
+    });
+});
