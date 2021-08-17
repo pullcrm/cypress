@@ -1,6 +1,7 @@
 let element = require('../../storage/dataTest.json');
 
-Cypress.Commands.add('regNewSpecialists', (companyName, specialistsName, specialistsTel, pass) => {
+Cypress.Commands.add('regNewSpecialists', (companyName, specialists) => {
+    console.log(specialists)
     cy.get(element.navbarDesktop)
         .find(element.specialistsLink)
         .click();
@@ -10,13 +11,14 @@ Cypress.Commands.add('regNewSpecialists', (companyName, specialistsName, special
         .click();
     cy.get(element.popup)
         .find(element.inputPhone)
-        .type(specialistsTel)
+        .type(specialists.tel)
     cy.get(element.popup)
         .find(element.inputName)
-        .type(specialistsName);
+        .type(specialists.name);
     cy.get(element.submitBtn)
         .click();
     cy.get(element.inputSmsCodeZ)
-        .type(pass)
-        //тест не закончен
+        .type(specialists.pass).wait(1000)
+    cy.get(element.specialistsPageCard)
+        .contains(specialists.name)
 });

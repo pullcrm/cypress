@@ -1,5 +1,7 @@
 {
     "elonMusk": { "tel": "0111111100", "pass": 1100, "name": "Elon Musk" },
+    "quentinTarantino": { "tel": "0111111200", "pass": 1200, "name": "Quentin Tarantino" },
+    "bruceWillis": { "tel": "0111111300", "pass": 1300, "name": "Bruce Willis" },
     "regNewUser": { "tel": "0111111111", "pass": 1111, "name": "Auto testing user" },
     "oldUser": { "tel": "0111111112", "pass": 1112 },
     "recoverUser": { "tel": "0999999993", "pass": "9993", "newPass": "1234" },
@@ -36,5 +38,6 @@
             "tel": "0111111115",
             "comments": "Слепой клиент"
         }
-    }
+    },
+    "specUser": { "1": { "tel": "0111111001", "name": "Анатолий Курочкин" } }
 }
