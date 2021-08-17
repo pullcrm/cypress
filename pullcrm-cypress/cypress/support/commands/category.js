@@ -1,6 +1,6 @@
 let element = require('../../storage/dataTest.json');
 
-Cypress.Commands.add('addСategoryService', (categoryName) => {
+Cypress.Commands.add('addСategoryProcedure', (categoryName) => {
     cy.get(element.navbarDesktop)
         .find(element.proceduresLink)
         .click();

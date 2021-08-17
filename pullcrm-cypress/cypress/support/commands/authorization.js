@@ -1,6 +1,6 @@
 let element = require('../../storage/dataTest.json');
 
-Cypress.Commands.add('authorization', (user) => {
+Cypress.Commands.add('authorization', (user, isOld) => {
     cy.get(element.login)
         .click();
     cy.get(element.loginPopUp)
@@ -12,6 +12,7 @@ Cypress.Commands.add('authorization', (user) => {
         .type(user.pass);
     cy.get(element.submitBtn)
         .click();
-    cy.get(element.navbarDesktop)
+    if (isOld)
+        cy.get(element.navbarDesktop)
         .should('be.visible');
 });

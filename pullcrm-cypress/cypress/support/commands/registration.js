@@ -1,10 +1,10 @@
 let element = require('../../storage/dataTest.json');
 
-Cypress.Commands.add('deleteUser', () => {
-    cy.request('GET', `${Cypress.env('CY_BASE_URL')}/api/tests/rdu`).then((response) => {
-        console.log(response.body)
-    });
-});
+// Cypress.Commands.add('deleteUser', () => {
+//     cy.request('GET', `${Cypress.env('CY_BASE_URL')}/api/tests/rdu`).then((response) => {
+//         console.log(response.body)
+//     });
+// });
 Cypress.Commands.add('registrationUser', (user) => {
     cy.get(element.login)
         .click();

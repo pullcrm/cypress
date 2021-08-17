@@ -30,9 +30,11 @@ import './commands/registration'
 import './commands/recover'
 import './commands/company'
 import './commands/specialists'
-import './commands/service'
+import './commands/procedure'
 import './commands/category'
 import './commands/widget'
+import './commands/task'
+
 
 
 

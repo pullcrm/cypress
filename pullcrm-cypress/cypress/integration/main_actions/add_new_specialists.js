@@ -1,8 +1,8 @@
 let ds = require('../../storage/dataStorage.json'),
-    userForTestWidget = ds.quentinTarantino;
+    userForTest = ds.quentinTarantino;
 it(`add new specialists`, function() {
-    cy.deleteAllspecialistsForTheCompany(userForTestWidget.tel)
+    cy.deleteAllspecialistsForTheCompany(userForTest.tel)
     cy.visitAuth(Cypress.env('CY_BASE_URL'));
-    cy.authorization(userForTestWidget)
-    cy.regNewSpecialists(userForTestWidget.name, ds.specialists[1])
+    cy.authorization(userForTest, 'oldUser')
+    cy.regNewSpecialists(userForTest.name, ds.specialists[1])
 });
