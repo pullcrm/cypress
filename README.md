@@ -6,6 +6,9 @@
 # Install library mysql
 # npm install mysql
 
+# An environment variable must be set
+# export CYPRESS_MYSQL_PASSWORD='<password>'
+
 # To run all specs in headles mode use
 # node_modules/.bin/cypress run
 
