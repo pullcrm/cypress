@@ -2,6 +2,9 @@
 Install Cypress for Mac, Linux, or Windows, then get started.
 npm install cypress --save-dev
 
+An environment variable must be set
+export CYPRESS_MYSQL_PASSWORD = '<password>'
+
 Install library mysql
 npm install mysql
 
