@@ -1,0 +1,15 @@
+{
+    "name": "pullcrm",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:tsarrB/pullcrm-cypress.git",
+    "author": "Nikitin Dmitriy",
+    "license": "MIT",
+    "dependencies": {
+        "cypress": "8.3.0"
+    },
+    "scripts": {
+        "cy:run": "cypress run",
+        "cy:open": "cypress open"
+    }
+}
