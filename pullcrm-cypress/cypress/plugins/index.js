@@ -29,7 +29,11 @@ const mysql = require('mysql')
 function queryTestDb(query, config) {
     // creates a new mysql connection using credentials from cypress.json 
     // env's
-    const connection = mysql.createConnection(config.env.db)
+    const connection = mysql.createConnection({
+            "host": config.env.MYSQL_HOST,
+            "user": config.env.MYSQL_USER,
+            "password": config.env.MYSQL_PASSWORD
+        })
         // start connection to db
     connection.connect()
         // exec query + disconnect to db as a Promise
