@@ -1,14 +1,15 @@
 # pullcrm-cypress
-Install Cypress for Mac, Linux, or Windows, then get started.
-npm install cypress --save-dev
 
-Install library mysql
-npm install mysql
+# Install Cypress for Mac, Linux, or Windows, then get started.
+# npm install cypress --save-dev
 
-To run all specs in headles mode use
-node_modules/.bin/cypress run
+# Install library mysql
+# npm install mysql
 
-To start windowed mode
-node_modules/.bin/cypress open
+# To run all specs in headles mode use
+# node_modules/.bin/cypress run
+
+# To start windowed mode
+# node_modules/.bin/cypress open
 
 
