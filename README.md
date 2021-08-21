@@ -3,6 +3,9 @@
 # Install Cypress for Mac, Linux, or Windows, then get started.
 # npm install cypress --save-dev
 
+# Install library cypress-file-upload
+# npm install --save-dev cypress-file-upload
+
 # Install library mysql
 # npm install mysql
 
@@ -14,5 +17,3 @@
 
 # To start windowed mode
 # node_modules/.bin/cypress open
-
-

@@ -105,3 +105,11 @@ Cypress.Commands.add('deleteAllProceduresInUser', (tel) => {
         };
     });
 });
+
+Cypress.Commands.add('clearUserPhoto', (tel) => {
+    cy.task('queryDb', `SELECT * FROM pullcrm_dev.users where phone = ${tel};`).then((user) => {
+        let userId = user[0].id;
+        cy.task('queryDb', `UPDATE pullcrm_dev.users SET avatarId = null WHERE (id = ${userId});`).then(() => {});
+        cy.task('queryDb', `DELETE FROM pullcrm_dev.file_users where userId = ${userId};`).then(() => {});
+    });
+});

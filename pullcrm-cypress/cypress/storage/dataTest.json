@@ -65,5 +65,9 @@
     "scheduleColumnGrid": ".schedule-column__grid",
     "uiDropdownList": ".ui-popover__body > .ui-dropdown-list",
     "appointmentPopup": ".appointment-popup",
-    "appointmentPopupDateTime": ".appointment-popup-date-time"
+    "appointmentPopupDateTime": ".appointment-popup-date-time",
+    "specialistsPageCardEdit": ".specialists-page-card__edit",
+    "inputFile": "input[type='file']",
+    "specialistAboutPageAvatars": ".specialist-about-page-avatars",
+    "back": ".ui-back"
 }

@@ -24,6 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import 'cypress-file-upload';
 
 import './commands/authorization'
 import './commands/registration'
@@ -40,7 +41,9 @@ import './commands/task'
 
 Cypress.Commands.add('visitAuth', (url) => {
     cy.visit(url, {
-        onBeforeLoad: (win) => { win.fetch = null, win.sessionStorage.clear() },
+        onBeforeLoad: (win) => {
+            // win.sessionStorage.clear()
+        },
         auth: {
             username: Cypress.env('BASIC_AUTH_USER'),
             password: Cypress.env('BASIC_AUTH_PASSWORD')

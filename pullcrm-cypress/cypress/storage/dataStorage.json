@@ -6,6 +6,7 @@
     "timurKarginov": { "tel": "0111111500", "pass": 1500, "name": "Timur Karginov" },
     "jonJones": { "tel": "0111111600", "pass": 1600, "name": "Jon Jones" },
     "louisSzekely": { "tel": "0111111700", "pass": 1700, "name": "Louis Szekely" },
+    "jasonStathem": { "tel": "0111111800", "pass": 1800, "name": "Jason Stathem" },
     "regNewUser": { "tel": "0111111111", "pass": 1111, "name": "Auto testing user" },
     "oldUser": { "tel": "0111111112", "pass": 1112 },
     "recoverUser": { "tel": "0999999993", "pass": "9993", "newPass": "1234" },
