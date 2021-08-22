@@ -9,13 +9,5 @@
     "retries": {
         "runMode": 1,
         "openMode": 0
-    },
-    "env": {
-        "MYSQL_HOST": "pullcrm.com",
-        "MYSQL_USER": "pullcrm_dev",
-        "MYSQL_PASSWORD": "",
-        "BASIC_AUTH_USER": "clients",
-        "BASIC_AUTH_PASSWORD": "guest",
-        "CY_BASE_URL": "https://dev.pullcrm.com"
     }
 }
