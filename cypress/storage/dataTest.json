@@ -53,7 +53,7 @@
     "fullWidgetDatePickerItemDate": ".full-widget-date-picker-item__date",
     "fullWidgetPickDatePageTimePickerGroup": ".full-widget-pick-date-page-time-picker-group",
     "fullWidgetLayout": ".full-widget-layout",
-    "schedulePageHeaderTomorrow": ".schedule-page-header__tomorrow",
+    "schedulePageHeaderTomorrow": ".schedule-page-sidebar [data-test='date-picker-tomorrow']",
     "timeBtnWidget": ".full-widget-pick-date-page-time-picker-group__badges>",
     "appointment": ".appointment",
     "buttonThemeInfoOutlined": ".ui-button_theme_info-outlined",
