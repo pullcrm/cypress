@@ -38,7 +38,7 @@ Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day,
 
     cy.url().then(url => {
         let newUrl = url.replace('3A15', '3A00')
-        cy.visitAuth(newUrl);
+        cy.visitAuth(newUrl).wait(1000);
         cy.get(element.fullWidgetPickDatePageButton)
             .click();
         cy.get(element.inputClientName)
