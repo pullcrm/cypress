@@ -1,5 +1,5 @@
 {
-    "login": ".landing-header__login",
+    "login": ".landing-header-actions__login",
     "loginPopUp": ".auth-page-layout",
     "inputPhone": "[name='phone']",
     "inputPass": "[name='password']",
@@ -10,7 +10,7 @@
     "registratioBtn": ".ui-button_theme_info-outlined",
     "policyBlok": ".auth-page-registration__policy",
     "popup": "[data-test=ui-popup]",
-    "registratioBtnMain": ".landing-header__registration",
+    "registratioBtnMain": ".landing-header-actions__registration",
     "recoverPassBtn": ".auth-page-login__reset",
     "title": ".ui-title",
     "inputSmsCode": "[placeholder^='Введите СМС-код']",
