@@ -27,7 +27,7 @@ Cypress.Commands.add('deleteAllCompany', (tel) => {
     });
 });
 
-Cypress.Commands.add('deleteAllAppointmentsFoTtheCompany', (tel) => {
+Cypress.Commands.add('deleteAllAppointmentsFoTheCompany', (tel) => {
     cy.task('queryDb', `SELECT * FROM pullcrm_dev.users where phone = ${tel};`).then((user) => {
         let userId = user[0].id;
         console.log(userId)
