@@ -1,10 +1,11 @@
 let ds = require('../../storage/dataStorage.json'),
-    userForTestWidget = ds.bruceWillis;
-it(`triple signup for procedure`, function() {
-    cy.deleteAllAppointmentsFoTheCompany(userForTestWidget.tel)
-    cy.clearTheRecordLock(ds.specUser[1].tel)
+    userForTestWidget = ds.bruceWillis,
+    specUser = ds.specUser.anatiliy.tel;
+it(`Triple signup for procedure`, function() {
+    cy.deleteAllAppointmentsFoTheCompany(userForTestWidget.tel);
+    cy.clearTheRecordLock(specUser);
     cy.visitAuth(Cypress.env('CY_BASE_URL'));
-    cy.authorization(userForTestWidget, 'oldUser')
+    cy.authorization(userForTestWidget, 'oldUser');
     cy.makeAppointmentInWidget(userForTestWidget.name, 'Наголо', 1, '09:00 - 09:15', ds.clients[1]);
     cy.forceMakeAppointmentInWidget(userForTestWidget.name, 'Наголо', 1, '09:00 - 09:15', ds.clients[2]);
     cy.disableRecordingForTheWholeDay(true, 1);
