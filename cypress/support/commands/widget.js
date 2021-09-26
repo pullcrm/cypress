@@ -7,20 +7,38 @@ Cypress.Commands.add('visitWidgetOnHeader', () => {
     });
 });
 
-Cypress.Commands.add('disableRecordingForTheWholeDay', (isTomorrow, numSpecialist) => {
+Cypress.Commands.add('disableRecordingForTheWholeDay', (isTomorrow, numSpecialist, path) => {
     cy.visitAuth(`${Cypress.env('CY_BASE_URL')}/schedule/`);
     if (isTomorrow)
         cy.get(element.schedulePageHeaderTomorrow)
         .click();
-    cy.get(element.scheduleColumnSpecialist)
-        .eq(numSpecialist).find(element.popover)
-        .click();
-    cy.get(element.dropdownMenuPopover).eq(numSpecialist + 1)
-        .contains('Закрыть запись')
-        .click();
-    cy.get(element.scheduleTimeoff)
-        .should('be.visible')
+    if (path == 'shortWay') {
+        cy.get(element.scheduleColumnSpecialist)
+            .eq(numSpecialist).find(element.popover)
+            .click();
+        cy.get(element.dropdownMenuPopover).eq(numSpecialist + 1)
+            .contains('Закрыть запись')
+            .click();
+        cy.get(element.scheduleTimeoff)
+            .should('be.visible')
+    } else if (path == 'longWay') {
+        cy.get(element.scheduleColumnGrid).eq(numSpecialist).click(145, 18);
+        cy.get(element.scheduleColumnGrid).eq(numSpecialist).click(145, 18);
+        cy.get(element.popoverMenuInner)
+            .click({ force: true });
+        cy.get(element.uiDropdownList)
+            .contains('Закрыть запись')
+            .click();
+        cy.get(element.uIswitch)
+            .click();
+        cy.get(element.submitBtn)
+            .click();
+    }
 });
+
+Cypress.Commands.add('disableRecordingForTime', (isTomorrow, numSpecialist, path) => {
+
+})
 
 Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day, time, client) => {
     cy.visitWidgetOnHeader();
