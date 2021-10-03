@@ -72,5 +72,6 @@
     "back": ".ui-back",
     "scheduleColumnCursor": ".schedule-column__cursor",
     "uIswitch": "[data-test=ui-switch]",
-    "popoverMenuInner": ".popover-menu-inner"
+    "popoverMenuInner": ".popover-menu-inner",
+    "uiSelectItems": ".ui-select__items"
 }

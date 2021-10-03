@@ -8,10 +8,12 @@ Cypress.Commands.add('visitWidgetOnHeader', () => {
 });
 
 Cypress.Commands.add('disableRecordingForTheWholeDay', (isTomorrow, numSpecialist, path) => {
+
     cy.visitAuth(`${Cypress.env('CY_BASE_URL')}/schedule/`);
     if (isTomorrow)
         cy.get(element.schedulePageHeaderTomorrow)
         .click();
+    cy.wait(500)
     if (path == 'shortWay') {
         cy.get(element.scheduleColumnSpecialist)
             .eq(numSpecialist).find(element.popover)
@@ -34,10 +36,42 @@ Cypress.Commands.add('disableRecordingForTheWholeDay', (isTomorrow, numSpecialis
         cy.get(element.submitBtn)
             .click();
     }
+    cy.get(element.scheduleColumnGrid).eq(numSpecialist)
+        .find(element.scheduleTimeoff)
+        .should('be.visible');
 });
 
-Cypress.Commands.add('disableRecordingForTime', (isTomorrow, numSpecialist, path) => {
+Cypress.Commands.add('disableRecordingForTime', (isTomorrow, numSpecialist, timeStart, timeFinish) => {
+    cy.wait(500)
+    if (isTomorrow)
+        cy.get(element.schedulePageHeaderTomorrow)
+        .click();
+    cy.get(element.scheduleColumnGrid).eq(numSpecialist).click(145, 18);
+    cy.get(element.scheduleColumnGrid).eq(numSpecialist).click(145, 18);
+    cy.get(element.popoverMenuInner)
+        .click({ force: true });
+    cy.get(element.uiDropdownList)
+        .contains('Закрыть запись')
+        .click();
+    cy.get(element.popup)
+        .contains('Время начала')
+        .click();
+    cy.get(element.uiSelectItems).eq(1)
+        .contains(timeStart)
+        .click();
 
+    cy.get(element.popup)
+        .contains('Время конца')
+        .click();
+    cy.get(element.uiSelectItems).eq(2)
+        .contains(timeFinish)
+        .click();
+    cy.get(element.popup)
+        .find(element.submitBtn)
+        .click();
+    cy.get(element.scheduleColumnGrid).eq(numSpecialist)
+        .find(element.scheduleTimeoff)
+        .should('be.visible');
 })
 
 Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day, time, client) => {
