@@ -7,6 +7,7 @@
     "jonJones": { "tel": "0111111600", "pass": 1600, "name": "Jon Jones" },
     "louisSzekely": { "tel": "0111111700", "pass": 1700, "name": "Louis Szekely" },
     "jasonStathem": { "tel": "0111111800", "pass": 1800, "name": "Jason Stathem" },
+    "angelinaJolie": { "tel": "0111111900", "pass": 1900, "name": "Angelina Jolie" },
     "regNewUser": { "tel": "0111111111", "pass": 1111, "name": "Auto testing user" },
     "oldUser": { "tel": "0111111112", "pass": 1112 },
     "recoverUser": { "tel": "0999999993", "pass": "9993", "newPass": "1234" },
@@ -52,6 +53,14 @@
         "roman": {
             "tel": "0111111002",
             "name": "Роман Пагасян"
+        },
+        "jony": {
+            "tel": "0111111003",
+            "name": "Джон"
+        },
+        "frank": {
+            "tel": "0111111004",
+            "name": "Франк"
         }
     }
 }

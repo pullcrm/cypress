@@ -1,8 +1,8 @@
 let ds = require('../../storage/dataStorage.json'),
-    userForTestWidget = ds.bruceWillis,
-    specUser1 = ds.bruceWillis.tel,
-    specUser2 = ds.specUser.anatoliy.tel,
-    specUser3 = ds.specUser.roman.tel;
+    userForTestWidget = ds.angelinaJolie,
+    specUser1 = ds.angelinaJolie.tel,
+    specUser2 = ds.specUser.jony.tel,
+    specUser3 = ds.specUser.frank.tel;
 
 it(`1`, function() {
     cy.deleteAllAppointmentsFoTheCompany(userForTestWidget.tel);
