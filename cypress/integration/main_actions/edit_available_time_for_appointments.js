@@ -1,20 +1,16 @@
 let ds = require('../../storage/dataStorage.json'),
     userForTestWidget = ds.angelinaJolie,
-    specUser1 = ds.angelinaJolie.tel,
-    specUser2 = ds.specUser.jony.tel,
-    specUser3 = ds.specUser.frank.tel;
-
-it(`1`, function() {
+    specUsers = [ds.angelinaJolie.tel, ds.specUser.jony.tel, ds.specUser.frank.tel],
+    disableDeys = ['today', 'tomorrow']
+it(`edit available time for appointments`, function() {
     cy.deleteAllAppointmentsFoTheCompany(userForTestWidget.tel);
-    cy.clearTheRecordLock(specUser1);
-    cy.clearTheRecordLock(specUser2);
-    cy.clearTheRecordLock(specUser3);
+    for (let specUser of specUsers)
+        cy.clearTheRecordLock(specUser);
     cy.visitAuth(Cypress.env('CY_BASE_URL'));
     cy.authorization(userForTestWidget, 'oldUser');
-    cy.disableRecordingForTheWholeDay(false, 0, 'shortWay');
-    cy.disableRecordingForTheWholeDay(false, 1, 'longWay');
-    cy.disableRecordingForTime(false, 2, '09:00', '10:00');
-    cy.disableRecordingForTheWholeDay(true, 0, 'shortWay');
-    cy.disableRecordingForTheWholeDay(true, 1, 'longWay');
-    cy.disableRecordingForTime(true, 2, '09:00', '10:00');
+    for (let disableDey of disableDeys) {
+        cy.disableRecordingForTheWholeDay(disableDey, 0, 'shortWay');
+        cy.disableRecordingForTheWholeDay(disableDey, 1, 'longWay');
+        cy.disableRecordingForTime(disableDey, 2, '09:00', '10:00');
+    };
 });

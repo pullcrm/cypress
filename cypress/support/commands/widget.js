@@ -7,10 +7,9 @@ Cypress.Commands.add('visitWidgetOnHeader', () => {
     });
 });
 
-Cypress.Commands.add('disableRecordingForTheWholeDay', (isTomorrow, numSpecialist, path) => {
-
+Cypress.Commands.add('disableRecordingForTheWholeDay', (day, numSpecialist, path) => {
     cy.visitAuth(`${Cypress.env('CY_BASE_URL')}/schedule/`);
-    if (isTomorrow)
+    if (day == 'tomorrow')
         cy.get(element.schedulePageHeaderTomorrow)
         .click();
     cy.wait(500)
@@ -41,9 +40,9 @@ Cypress.Commands.add('disableRecordingForTheWholeDay', (isTomorrow, numSpecialis
         .should('be.visible');
 });
 
-Cypress.Commands.add('disableRecordingForTime', (isTomorrow, numSpecialist, timeStart, timeFinish) => {
+Cypress.Commands.add('disableRecordingForTime', (day, numSpecialist, timeStart, timeFinish) => {
     cy.wait(500)
-    if (isTomorrow)
+    if (day == 'tomorrow')
         cy.get(element.schedulePageHeaderTomorrow)
         .click();
     cy.get(element.scheduleColumnGrid).eq(numSpecialist).click(145, 18);
@@ -59,7 +58,6 @@ Cypress.Commands.add('disableRecordingForTime', (isTomorrow, numSpecialist, time
     cy.get(element.uiSelectItems).eq(1)
         .contains(timeStart)
         .click();
-
     cy.get(element.popup)
         .contains('Время конца')
         .click();
