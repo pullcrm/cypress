@@ -5,7 +5,7 @@ Cypress.Commands.add('authorization', (user, isOld) => {
         .click();
     cy.get(element.loginPopUp)
         .should('be.visible');
-    cy.contains('Авторизация');
+    cy.contains('Авторизація');
     cy.get(element.inputPhone)
         .type(user.tel);
     cy.get(element.inputPass)

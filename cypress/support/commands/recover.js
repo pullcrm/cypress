@@ -7,7 +7,7 @@ Cypress.Commands.add('recoverPassword', (tel, pass, newPass) => {
         .should('be.visible');
     cy.get(element.recoverPassBtn)
         .click();
-    cy.contains('Введите номер телефона, чтобы восстановить доступ');
+    cy.contains('Введіть номер телефону, щоб відновити доступ');
     cy.get(element.inputPhone)
         .type(tel);
     cy.get(element.submitBtn)
@@ -21,9 +21,9 @@ Cypress.Commands.add('recoverPassword', (tel, pass, newPass) => {
     cy.get(element.submitBtn)
         .click();
     cy.get(element.toast)
-        .contains('Пароль изменен!')
+        .contains('Пароль змінено!')
         .should('be.visible');
-    cy.contains('Войдите в систему, чтобы получить доступ к своей компании')
+    cy.contains('Увійдіть у систему, щоб отримати доступ до своєї компанії')
     cy.get(element.inputPhone)
         .type(tel);
     cy.get(element.inputPass)

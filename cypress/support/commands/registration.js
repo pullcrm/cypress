@@ -14,14 +14,14 @@ Cypress.Commands.add('registrationUser', (user) => {
         .click();
     cy.get(element.policyBlok)
         .should('be.visible');
-    cy.contains('Регистрация');
+    cy.contains('Реєстрація');
     cy.go('back');
     cy.go('back');
     cy.get(element.registratioBtnMain)
         .click();
     cy.get(element.policyBlok)
         .should('be.visible');
-    cy.contains('Регистрация');
+    cy.contains('Реєстрація');
     cy.get(element.inputPhone)
         .type(user.tel);
     cy.get(element.inputPass)
@@ -32,5 +32,5 @@ Cypress.Commands.add('registrationUser', (user) => {
         .click();
     cy.get(element.inputSmsCodeZ)
         .type(user.pass)
-    cy.contains('Создание компании');
+    cy.contains('Створення компанії');
 });

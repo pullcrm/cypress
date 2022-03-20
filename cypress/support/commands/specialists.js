@@ -9,7 +9,7 @@ Cypress.Commands.add('regNewSpecialists', (companyName, specialists) => {
         .click();
     cy.get(element.specialistsPage).contains(companyName)
         .should('be.visible');
-    cy.get('button').contains('Добавить сотрудника')
+    cy.get('button').contains('Добавити співробітника')
         .click();
     cy.get(element.popup)
         .find(element.inputPhone)

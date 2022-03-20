@@ -3,10 +3,10 @@ let element = require('../../storage/dataTest.json');
 Cypress.Commands.add('regNewCompany', (companyName, city, categoryName, num, isDashbord) => {
     if (isDashbord === true) {
         cy.get(element.carouselItem)
-            .contains('Добавить компанию')
+            .contains('Добавити компанію')
             .click();
     }
-    cy.contains('Создание компании');
+    cy.contains('Створення компанії');
     cy.get(element.inputCompanyName)
         .type(companyName);
     cy.get(element.inputCityName)

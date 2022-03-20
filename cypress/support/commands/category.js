@@ -7,7 +7,7 @@ Cypress.Commands.add('addСategoryProcedure', (categoryName) => {
     cy.get(element.proceduresPage)
         .should('be.visible')
     cy.get('button')
-        .contains('Добавить категорию')
+        .contains('Добавити категорію')
         .click();
     cy.get(element.inputCategogyName)
         .type(categoryName);

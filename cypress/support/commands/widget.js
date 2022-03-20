@@ -3,7 +3,7 @@ let element = require('../../storage/dataTest.json');
 Cypress.Commands.add('visitWidgetOnHeader', () => {
     cy.get(element.header).find(element.widgetLink).then(widgetLink => {
         cy.visitAuth(widgetLink[0].href);
-        cy.contains('Выберите специалиста');
+        cy.contains('Виберіть спеціаліста');
     });
 });
 
@@ -18,7 +18,7 @@ Cypress.Commands.add('disableRecordingForTheWholeDay', (day, numSpecialist, path
             .eq(numSpecialist).find(element.popover)
             .click();
         cy.get(element.dropdownMenuPopover).eq(numSpecialist + 1)
-            .contains('Закрыть запись')
+            .contains('Закрити запис')
             .click();
         cy.get(element.scheduleTimeoff)
             .should('be.visible')
@@ -28,7 +28,7 @@ Cypress.Commands.add('disableRecordingForTheWholeDay', (day, numSpecialist, path
         cy.get(element.popoverMenuInner)
             .click({ force: true });
         cy.get(element.uiDropdownList)
-            .contains('Закрыть запись')
+            .contains('Закрити запис')
             .click();
         cy.get(element.uIswitch)
             .click();
@@ -50,16 +50,16 @@ Cypress.Commands.add('disableRecordingForTime', (day, numSpecialist, timeStart, 
     cy.get(element.popoverMenuInner)
         .click({ force: true });
     cy.get(element.uiDropdownList)
-        .contains('Закрыть запись')
+        .contains('Закрити запис')
         .click();
     cy.get(element.popup)
-        .contains('Время начала')
+        .contains('Час початку')
         .click();
     cy.get(element.uiSelectItems).eq(1)
         .contains(timeStart)
         .click();
     cy.get(element.popup)
-        .contains('Время конца')
+        .contains('Час закінчення')
         .click();
     cy.get(element.uiSelectItems).eq(2)
         .contains(timeFinish)
@@ -74,10 +74,10 @@ Cypress.Commands.add('disableRecordingForTime', (day, numSpecialist, timeStart, 
 
 Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day, time, client) => {
     cy.visitWidgetOnHeader();
-    cy.contains('Выберите специалиста');
+    cy.contains('Виберіть спеціаліста');
     cy.get(element.fullWidgetSpecialistPanel).contains(specialis)
         .click();
-    cy.contains('Выберите услуг');
+    cy.contains('Виберіть послуги');
     cy.get(element.baseWidgetProcedurePanel).contains(procedure)
         .click();
     cy.get(element.fullWidgetProceduresPageButton)
@@ -99,17 +99,17 @@ Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day,
             .type(client.comments);
         cy.get(element.fullWidgetConfirmationPageButton)
             .click();
-        cy.contains('Что-то пошло не так, попробуйте вернутся назад и выбрать другое время!')
+        cy.contains('Щось пішло не так, спробуйте повернутись назад і вибрати інший час!')
             .should('be.visible');
     })
 });
 
 Cypress.Commands.add('makeAppointmentInWidget', (specialis, procedure, day, time, client) => {
     cy.visitWidgetOnHeader();
-    cy.contains('Выберите специалиста');
+    cy.contains('Виберіть спеціаліста');
     cy.get(element.fullWidgetSpecialistPanel).contains(specialis)
         .click();
-    cy.contains('Выберите услуг');
+    cy.contains('Виберіть послуги');
     cy.get(element.baseWidgetProcedurePanel).contains(procedure)
         .click();
     cy.get(element.fullWidgetProceduresPageButton)
@@ -131,13 +131,13 @@ Cypress.Commands.add('makeAppointmentInWidget', (specialis, procedure, day, time
             .type(client.comments);
         cy.get(element.fullWidgetConfirmationPageButton)
             .click();
-        cy.contains('Ваша запись');
+        cy.contains('Ваш запис');
         cy.get(element.buttonThemeInfoOutlined)
             .click();
-        cy.contains('Выберите специалиста');
+        cy.contains('Виберіть спеціаліста');
         cy.get(element.fullWidgetSpecialistPanel).contains(specialis)
             .click();
-        cy.contains('Выберите услуг');
+        cy.contains('Виберіть послуги');
         cy.get(element.baseWidgetProcedurePanel).contains(procedure)
             .click();
         cy.get(element.fullWidgetProceduresPageButton)
@@ -161,7 +161,7 @@ Cypress.Commands.add('makeAppointmentInAdmin', (isTomorrow, numSpecialis, client
     cy.get(element.scheduleColumnGrid).eq(numSpecialis)
         .dblclick(100, 10);
     cy.get(element.appointmentPopup)
-        .contains('Новая запись');
+        .contains('Новий запис');
     cy.get(element.inputClientNameAdmin)
         .type(client.name);
     cy.get(element.inputClientTelAdmin)
@@ -171,8 +171,8 @@ Cypress.Commands.add('makeAppointmentInAdmin', (isTomorrow, numSpecialis, client
     cy.get(element.selectBody).contains('Наголо')
         .click();
     cy.get(element.appointmentPopupDateTime)
-        .contains('Завершение в 09:15')
-    cy.get(element.submitBtn).contains('Добавить')
+        .contains('Завершується в 09:15')
+    cy.get(element.submitBtn).contains('Добавити')
         .click();
     cy.get(element.appointmentPopup)
         .should('not.exist');
