@@ -172,7 +172,7 @@ Cypress.Commands.add('makeAppointmentInAdmin', (isTomorrow, numSpecialis, client
         .click();
     cy.get(element.appointmentPopupDateTime)
         .contains('Завершується в 09:15')
-    cy.get(element.submitBtn).contains('Добавити')
+    cy.get(element.submitBtn).contains('Додати')
         .click();
     cy.get(element.appointmentPopup)
         .should('not.exist');

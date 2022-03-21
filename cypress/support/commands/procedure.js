@@ -6,10 +6,10 @@ Cypress.Commands.add('addProcedure', (inputProcedureName, price, time, descripti
     cy.get(element.proceduresPage)
         .should('be.visible');
     cy.get('button')
-        .contains('Добавити послугу')
+        .contains('Додати послугу')
         .click();
     cy.get(element.popup).find(element.title)
-        .contains('Добавити послугу');
+        .contains('Додати послугу');
     cy.get(element.inputProcedureName)
         .type(inputProcedureName)
     cy.get(element.inputPrice)
@@ -48,7 +48,7 @@ Cypress.Commands.add('addProcedureInCategiry', (inputProcedureName, price, time,
         .should('be.visible');
     if (btn == 'btnOutCategory') {
         cy.get('button')
-            .contains('Добавити послугу')
+            .contains('Додати послугу')
             .click();
         cy.get(element.inputCategoryName)
             .click();
@@ -58,7 +58,7 @@ Cypress.Commands.add('addProcedureInCategiry', (inputProcedureName, price, time,
     } else if (btn == 'btnInCategory') {
         cy.get(element.proceduresPage)
             .contains(category).parent().parent()
-            .contains('Добавити послугу')
+            .contains('Додати послугу')
             .click();
         cy.get(element.inputCategoryName).then(inputCategoryName => {
             assert.isOk(inputCategoryName[0]._value === category, `Категория ${category} уже выбрана в popUp`)

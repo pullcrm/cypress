@@ -9,7 +9,7 @@ Cypress.Commands.add('regNewSpecialists', (companyName, specialists) => {
         .click();
     cy.get(element.specialistsPage).contains(companyName)
         .should('be.visible');
-    cy.get('button').contains('Добавити співробітника')
+    cy.get('button').contains('Додати співробітника')
         .click();
     cy.get(element.popup)
         .find(element.inputPhone)
@@ -19,10 +19,9 @@ Cypress.Commands.add('regNewSpecialists', (companyName, specialists) => {
         .type(specialists.name);
     cy.get(element.submitBtn)
         .click();
-    cy.get(element.inputSmsCodeZ)
-        .type(specialists.pass).wait(1000)
+    cy.wait(1000)
     cy.get(element.specialistsPageCard)
-        .contains(specialists.name)
+       .contains(specialists.name)
 });
 
 Cypress.Commands.add('addProfilePhoto', (filepath) => {
