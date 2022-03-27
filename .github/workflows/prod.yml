@@ -29,4 +29,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          env: {{ secrets.CYPRESS_ENVIRONMENT }}
+          env: ${{ secrets.CYPRESS_ENVIRONMENT }}
