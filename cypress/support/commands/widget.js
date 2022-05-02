@@ -16,7 +16,7 @@ Cypress.Commands.add('disableRecordingForTheWholeDay', (day, numSpecialist, path
     if (path == 'shortWay') {
         cy.get(element.scheduleColumnSpecialist)
             .eq(numSpecialist).find(element.popover)
-            .click();
+            .click({ force: true });
         cy.get(element.dropdownMenuPopover).eq(numSpecialist + 1)
             .contains('Закрити запис')
             .click();
