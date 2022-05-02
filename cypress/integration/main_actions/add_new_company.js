@@ -5,5 +5,5 @@ it(`add new company`, function() {
     cy.visitAuth(Cypress.env('CY_BASE_URL'));
     cy.authorization(userForTest);
     cy.regNewCompany('BestOfTheBest', 'Киев', 'Barbershop', 2)
-    cy.regNewCompany('Подгоршек', 'Черновцы', 'Салон красоты', 3, true)
+    cy.regNewCompany('Подгоршек', 'Черновцы', 'Nail салон', 3, true)
 });

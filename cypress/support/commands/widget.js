@@ -8,7 +8,7 @@ Cypress.Commands.add('visitWidgetOnHeader', () => {
 });
 
 Cypress.Commands.add('disableRecordingForTheWholeDay', (day, numSpecialist, path) => {
-    cy.visitAuth(`${Cypress.env('CY_BASE_URL')}/schedule/`);
+    cy.visitAuth(`${Cypress.env('CY_BASE_URL')}/app/schedule/`);
     if (day == 'tomorrow')
         cy.get(element.schedulePageHeaderTomorrow)
         .click();
@@ -146,7 +146,7 @@ Cypress.Commands.add('makeAppointmentInWidget', (specialis, procedure, day, time
             .eq(day).wait(1000).click().wait(1000);
         cy.get(element.timeBtnWidget).should('be.length', timeBtnLength - 1)
     });
-    cy.visitAuth(Cypress.env('CY_BASE_URL') + '/schedule/');
+    cy.visitAuth(Cypress.env('CY_BASE_URL') + '/app/schedule/');
     cy.get(element.schedulePageHeaderTomorrow)
         .click();
     cy.get(element.appointment).contains(client.name)
@@ -154,7 +154,7 @@ Cypress.Commands.add('makeAppointmentInWidget', (specialis, procedure, day, time
 
 
 Cypress.Commands.add('makeAppointmentInAdmin', (isTomorrow, numSpecialis, client) => {
-    cy.visitAuth(`${Cypress.env('CY_BASE_URL')}/schedule/`);
+    cy.visitAuth(`${Cypress.env('CY_BASE_URL')}/app/schedule/`);
     if (isTomorrow)
         cy.get(element.schedulePageHeaderTomorrow)
         .click();
