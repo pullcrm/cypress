@@ -6,7 +6,6 @@
     "author": "Nikitin Dmitriy",
     "license": "MIT",
     "dependencies": {
-        "cypress": "8.5",
         "mysql": "^2.18.1"
     },
     "scripts": {
@@ -14,6 +13,7 @@
         "cy:open": "cypress open"
     },
     "devDependencies": {
+        "cypress": "^10.1.0",
         "cypress-file-upload": "^5.0.8"
     }
 }
