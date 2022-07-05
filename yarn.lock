@@ -220,7 +220,6 @@
   "resolved" "https://registry.npmjs.org/cli-table3/-/cli-table3-0.6.0.tgz"
   "version" "0.6.0"
   dependencies:
-    "colors" "^1.1.2"
     "object-assign" "^4.1.0"
     "string-width" "^4.2.0"
   optionalDependencies:
@@ -297,10 +296,10 @@
   "resolved" "https://registry.npmjs.org/cypress-file-upload/-/cypress-file-upload-5.0.8.tgz"
   "version" "5.0.8"
 
-"cypress@^8.4.1":
-  "integrity" "sha512-b1bMC3VQydC6sXzBMFnSqcvwc9dTZMgcaOzT0vpSD+Gq1yFc+72JDWi55sfUK5eIeNLAtWOGy1NNb6UlhMvB+Q=="
-  "resolved" "https://registry.npmjs.org/cypress/-/cypress-8.7.0.tgz"
-  "version" "8.7.0"
+"cypress@8.5":
+  "integrity" "sha512-MMkXIS+Ro2KETn4gAlG3tIc/7FiljuuCZP0zpd9QsRG6MZSyZW/l1J3D4iQM6WHsVxuX4rFChn5jPFlC2tNSvQ=="
+  "resolved" "https://registry.npmjs.org/cypress/-/cypress-8.5.0.tgz"
+  "version" "8.5.0"
   dependencies:
     "@cypress/request" "^2.88.6"
     "@cypress/xvfb" "^1.2.4"
@@ -445,7 +444,6 @@
   "resolved" "https://registry.npmjs.org/extract-zip/-/extract-zip-2.0.1.tgz"
   "version" "2.0.1"
   dependencies:
-    "@types/yauzl" "^2.9.1"
     "debug" "^4.1.1"
     "get-stream" "^5.1.0"
     "yauzl" "^2.10.0"
