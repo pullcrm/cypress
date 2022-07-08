@@ -1,7 +1,7 @@
 let ds = require('../../storage/dataStorage.json'),
     userForTest = ds.louisSzekely;
+
 it(`add category procedure`, function() {
-    console.log(ds)
     cy.deleteAllProceduresInUser(userForTest.tel);
     cy.visitAuth(Cypress.env('CY_BASE_URL'));
     cy.authorization(userForTest, 'oldUser');

@@ -6,7 +6,7 @@ Cypress.Commands.add('regNewCompany', (companyName, city, categoryName, num, isD
             .contains('Додати компанію')
             .click();
     }
-    cy.contains('Створення компанії');
+    cy.contains('Створення компанії').wait(500);
     cy.get(element.inputCompanyName)
         .type(companyName);
     cy.get(element.inputCityName)

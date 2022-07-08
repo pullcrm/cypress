@@ -48,5 +48,5 @@ Cypress.Commands.add('visitAuth', (url) => {
             username: Cypress.env('BASIC_AUTH_USER'),
             password: Cypress.env('BASIC_AUTH_PASSWORD')
         }
-    })
+    }).wait(1000)
 });

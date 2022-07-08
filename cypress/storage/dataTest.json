@@ -42,7 +42,7 @@
     "inputRepeatPassword": "[name='repeatPassword']",
     "proceduresPage": ".procedures-page",
     "proceduresPageProcedureCard": ".procedures-page-procedure-card",
-    "widgetLink": "[href^='https://dev.pullcrm.com/widgets/full']",
+    "widgetLink": "[href^='https://dev-app.pullcrm.com/widgets/full']",
     "header": ".header",
     "multiSelect": ".ui-multi-select__badge",
     "fullWidgetSpecialistPanel": ".full-widget-specialist-panel",

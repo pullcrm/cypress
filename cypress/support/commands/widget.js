@@ -18,7 +18,7 @@ Cypress.Commands.add('disableRecordingForTheWholeDay', (day, numSpecialist, path
             .eq(numSpecialist).find(element.popover)
             .click({ force: true });
         cy.get(element.dropdownMenuPopover).eq(numSpecialist + 1)
-            .contains('Закрити запис')
+            .contains('Закрити запис на цей день')
             .click();
         cy.get(element.scheduleTimeoff)
             .should('be.visible')
@@ -28,7 +28,7 @@ Cypress.Commands.add('disableRecordingForTheWholeDay', (day, numSpecialist, path
         cy.get(element.popoverMenuInner)
             .click({ force: true });
         cy.get(element.uiDropdownList)
-            .contains('Закрити запис')
+            .contains('Додати перерву')
             .click();
         cy.get(element.uIswitch)
             .click();
@@ -50,7 +50,7 @@ Cypress.Commands.add('disableRecordingForTime', (day, numSpecialist, timeStart, 
     cy.get(element.popoverMenuInner)
         .click({ force: true });
     cy.get(element.uiDropdownList)
-        .contains('Закрити запис')
+        .contains('Додати перерву')
         .click();
     cy.get(element.popup)
         .contains('Час початку')
@@ -146,7 +146,7 @@ Cypress.Commands.add('makeAppointmentInWidget', (specialis, procedure, day, time
             .eq(day).wait(1000).click().wait(1000);
         cy.get(element.timeBtnWidget).should('be.length', timeBtnLength - 1)
     });
-    cy.visitAuth(Cypress.env('CY_BASE_URL') + '/schedule/');
+    cy.visitAuth(`${Cypress.env('CY_BASE_URL')}/schedule/`);
     cy.get(element.schedulePageHeaderTomorrow)
         .click();
     cy.get(element.appointment).contains(client.name)

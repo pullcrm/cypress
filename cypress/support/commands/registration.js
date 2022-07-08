@@ -6,8 +6,6 @@ let element = require('../../storage/dataTest.json');
 //     });
 // });
 Cypress.Commands.add('registrationUser', (user) => {
-    cy.get(element.login)
-        .click();
     cy.get(element.loginPopUp)
         .should('be.visible');
     cy.get(element.registratioBtn)

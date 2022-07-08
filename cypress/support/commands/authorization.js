@@ -1,8 +1,6 @@
 let element = require('../../storage/dataTest.json');
 
 Cypress.Commands.add('authorization', (user, isOld) => {
-    cy.get(element.login)
-        .click();
     cy.get(element.loginPopUp)
         .should('be.visible');
     cy.contains('Авторизація');
