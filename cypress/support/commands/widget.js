@@ -76,6 +76,7 @@ Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day,
     cy.visitWidgetOnHeader();
     cy.contains('Виберіть спеціаліста');
     cy.get(element.fullWidgetSpecialistPanel).contains(specialis)
+        .wait(500)
         .click();
     cy.contains('Виберіть послуги');
     cy.get(element.baseWidgetProcedurePanel).contains(procedure)
@@ -87,7 +88,7 @@ Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day,
     cy.get(element.timeBtnWidget).eq(0).click()
 
     cy.url().then(url => {
-        let newUrl = url.replace('3A15', '3A00')
+        let newUrl = url.replace(':15', ':00')
         cy.visitAuth(newUrl).wait(1000);
         cy.get(element.fullWidgetPickDatePageButton)
             .click();
@@ -99,7 +100,7 @@ Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day,
             .type(client.comments);
         cy.get(element.fullWidgetConfirmationPageButton)
             .click();
-        cy.contains('Щось пішло не так, спробуйте повернутись назад і вибрати інший час!')
+        cy.get(element.toastError)
             .should('be.visible');
     })
 });
@@ -107,7 +108,9 @@ Cypress.Commands.add('forceMakeAppointmentInWidget', (specialis, procedure, day,
 Cypress.Commands.add('makeAppointmentInWidget', (specialis, procedure, day, time, client) => {
     cy.visitWidgetOnHeader();
     cy.contains('Виберіть спеціаліста');
-    cy.get(element.fullWidgetSpecialistPanel).contains(specialis)
+    cy.get(element.fullWidgetSpecialistPanel)
+        .contains(specialis)
+        .wait(500)
         .click();
     cy.contains('Виберіть послуги');
     cy.get(element.baseWidgetProcedurePanel).contains(procedure)
@@ -135,7 +138,9 @@ Cypress.Commands.add('makeAppointmentInWidget', (specialis, procedure, day, time
         cy.get(element.buttonThemeInfoOutlined)
             .click();
         cy.contains('Виберіть спеціаліста');
-        cy.get(element.fullWidgetSpecialistPanel).contains(specialis)
+        cy.get(element.fullWidgetSpecialistPanel)
+            .contains(specialis)
+            .wait(500)
             .click();
         cy.contains('Виберіть послуги');
         cy.get(element.baseWidgetProcedurePanel).contains(procedure)
