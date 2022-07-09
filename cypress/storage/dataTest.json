@@ -6,10 +6,9 @@
     "submitBtn": "[type='submit']",
     "navbarDesktop": ".navbar-desktop",
     "navBarAvatar": ".ui-popover > .ui-avatar",
-    "registratioBtn": "[data-test=registration-button]",
+    "registrationBtn": "[data-test=registration-button]",
     "policyBlock": "[data-test=policy-link]",
     "popup": "[data-test=ui-popup]",
-    "registratioBtnMain": ".header-actions__registration",
     "recoverPassBtn": "[data-test=reset-password-button",
     "title": ".ui-title",
     "inputSmsCode": "[data-test=code-input]",
@@ -72,5 +71,6 @@
     "scheduleColumnCursor": ".schedule-column__cursor",
     "uIswitch": "[data-test=ui-switch]",
     "popoverMenuInner": ".popover-menu-inner",
-    "uiSelectItems": ".ui-select__items"
+    "uiSelectItems": ".ui-select__items",
+    "companyCreatePage": "[data-test=company-create-page]"
 }

@@ -8,18 +8,15 @@ let element = require('../../storage/dataTest.json');
 Cypress.Commands.add('registrationUser', (user) => {
     cy.get(element.loginPopUp)
         .should('be.visible');
-    cy.get(element.registratioBtn)
+    cy.get(element.registrationBtn)
         .click();
     cy.get(element.policyBlock)
         .should('be.visible');
-    cy.contains('Реєстрація');
     cy.go('back');
-    cy.go('back');
-    cy.get(element.registratioBtnMain)
+    cy.get(element.registrationBtn)
         .click();
     cy.get(element.policyBlock)
         .should('be.visible');
-    cy.contains('Реєстрація');
     cy.get(element.inputPhone)
         .type(user.tel);
     cy.get(element.inputPass)
@@ -30,5 +27,6 @@ Cypress.Commands.add('registrationUser', (user) => {
         .click();
     cy.get(element.inputSmsCodeZ)
         .type(user.pass)
-    cy.contains('Створення компанії');
+    cy.get(element.companyCreatePage)
+        .should('be.visible');
 });
