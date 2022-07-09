@@ -40,6 +40,7 @@ Cypress.Commands.add('addProfilePhoto', (filepath) => {
     cy.get(element.inputFile)
         .attachFile(filepath).wait(1000)
     cy.get(element.specialistAboutPageAvatars)
+        .wait(1000)
     cy.get('img')
         .should('be.visible');
     cy.get(element.back)

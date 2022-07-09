@@ -10,14 +10,14 @@ Cypress.Commands.add('registrationUser', (user) => {
         .should('be.visible');
     cy.get(element.registratioBtn)
         .click();
-    cy.get(element.policyBlok)
+    cy.get(element.policyBlock)
         .should('be.visible');
     cy.contains('Реєстрація');
     cy.go('back');
     cy.go('back');
     cy.get(element.registratioBtnMain)
         .click();
-    cy.get(element.policyBlok)
+    cy.get(element.policyBlock)
         .should('be.visible');
     cy.contains('Реєстрація');
     cy.get(element.inputPhone)
