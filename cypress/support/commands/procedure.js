@@ -58,7 +58,7 @@ Cypress.Commands.add('addProcedureInCategiry', (inputProcedureName, price, time,
     } else if (btn == 'btnInCategory') {
         cy.get(element.proceduresPage)
             .contains(category).parent().parent()
-            .contains('Додати послугу')
+            .contains(' Додати послугу ')
             .click();
         cy.get(element.inputCategoryName).then(inputCategoryName => {
             assert.isOk(inputCategoryName[0]._value === category, `Категория ${category} уже выбрана в popUp`)
